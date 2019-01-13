@@ -38,5 +38,11 @@ namespace GuessMelody
             //this.Hide();
             fg.ShowDialog();
         }
+
+        private void FMain_Load(object sender, EventArgs e)
+        {
+            Quiz.ReadParam();
+            Quiz.ReadMusic();
+        }
     }
 }

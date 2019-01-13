@@ -84,6 +84,7 @@
             this.Name = "FMain";
             this.Text = "Угадай мелодию";
             this.UseWaitCursor = true;
+            this.Load += new System.EventHandler(this.FMain_Load);
             this.ResumeLayout(false);
 
         }

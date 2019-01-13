@@ -36,11 +36,11 @@
             this.BtnOk = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.GBSettings = new System.Windows.Forms.GroupBox();
-            this.LblContinue = new System.Windows.Forms.Label();
-            this.LblTime = new System.Windows.Forms.Label();
-            this.CBGameDuration = new System.Windows.Forms.ComboBox();
-            this.CBMusicDuration = new System.Windows.Forms.ComboBox();
             this.CBRandomStart = new System.Windows.Forms.CheckBox();
+            this.CBMusicDuration = new System.Windows.Forms.ComboBox();
+            this.CBGameDuration = new System.Windows.Forms.ComboBox();
+            this.LblTime = new System.Windows.Forms.Label();
+            this.LblContinue = new System.Windows.Forms.Label();
             this.GBSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,23 +117,31 @@
             this.GBSettings.TabStop = false;
             this.GBSettings.Text = "Настройки игры";
             // 
-            // LblContinue
+            // CBRandomStart
             // 
-            this.LblContinue.AutoSize = true;
-            this.LblContinue.Location = new System.Drawing.Point(7, 35);
-            this.LblContinue.Name = "LblContinue";
-            this.LblContinue.Size = new System.Drawing.Size(177, 17);
-            this.LblContinue.TabIndex = 0;
-            this.LblContinue.Text = "Продолжительность игры";
+            this.CBRandomStart.AutoSize = true;
+            this.CBRandomStart.Location = new System.Drawing.Point(10, 132);
+            this.CBRandomStart.Name = "CBRandomStart";
+            this.CBRandomStart.Size = new System.Drawing.Size(169, 21);
+            this.CBRandomStart.TabIndex = 4;
+            this.CBRandomStart.Text = "Со случайного места";
+            this.CBRandomStart.UseVisualStyleBackColor = true;
             // 
-            // LblTime
+            // CBMusicDuration
             // 
-            this.LblTime.AutoSize = true;
-            this.LblTime.Location = new System.Drawing.Point(7, 81);
-            this.LblTime.Name = "LblTime";
-            this.LblTime.Size = new System.Drawing.Size(111, 17);
-            this.LblTime.TabIndex = 1;
-            this.LblTime.Text = "Время на ответ";
+            this.CBMusicDuration.FormattingEnabled = true;
+            this.CBMusicDuration.Items.AddRange(new object[] {
+            "50",
+            "40",
+            "30",
+            "20",
+            "10",
+            "5"});
+            this.CBMusicDuration.Location = new System.Drawing.Point(192, 78);
+            this.CBMusicDuration.Name = "CBMusicDuration";
+            this.CBMusicDuration.Size = new System.Drawing.Size(121, 24);
+            this.CBMusicDuration.TabIndex = 3;
+            this.CBMusicDuration.Text = "20";
             // 
             // CBGameDuration
             // 
@@ -157,31 +165,23 @@
             this.CBGameDuration.TabIndex = 2;
             this.CBGameDuration.Text = "60";
             // 
-            // CBMusicDuration
+            // LblTime
             // 
-            this.CBMusicDuration.FormattingEnabled = true;
-            this.CBMusicDuration.Items.AddRange(new object[] {
-            "50",
-            "40",
-            "30",
-            "20",
-            "10",
-            "5"});
-            this.CBMusicDuration.Location = new System.Drawing.Point(192, 78);
-            this.CBMusicDuration.Name = "CBMusicDuration";
-            this.CBMusicDuration.Size = new System.Drawing.Size(121, 24);
-            this.CBMusicDuration.TabIndex = 3;
-            this.CBMusicDuration.Text = "20";
+            this.LblTime.AutoSize = true;
+            this.LblTime.Location = new System.Drawing.Point(7, 81);
+            this.LblTime.Name = "LblTime";
+            this.LblTime.Size = new System.Drawing.Size(111, 17);
+            this.LblTime.TabIndex = 1;
+            this.LblTime.Text = "Время на ответ";
             // 
-            // CBRandomStart
+            // LblContinue
             // 
-            this.CBRandomStart.AutoSize = true;
-            this.CBRandomStart.Location = new System.Drawing.Point(10, 132);
-            this.CBRandomStart.Name = "CBRandomStart";
-            this.CBRandomStart.Size = new System.Drawing.Size(169, 21);
-            this.CBRandomStart.TabIndex = 4;
-            this.CBRandomStart.Text = "Со случайного места";
-            this.CBRandomStart.UseVisualStyleBackColor = true;
+            this.LblContinue.AutoSize = true;
+            this.LblContinue.Location = new System.Drawing.Point(7, 35);
+            this.LblContinue.Name = "LblContinue";
+            this.LblContinue.Size = new System.Drawing.Size(177, 17);
+            this.LblContinue.TabIndex = 0;
+            this.LblContinue.Text = "Продолжительность игры";
             // 
             // FParams
             // 
@@ -198,6 +198,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FParams";
             this.Text = "Настройки";
+            this.Load += new System.EventHandler(this.FParams_Load);
             this.GBSettings.ResumeLayout(false);
             this.GBSettings.PerformLayout();
             this.ResumeLayout(false);

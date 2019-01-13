@@ -30,11 +30,16 @@ namespace GuessMelody
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
+            Set();
+            this.Hide();
+        }
+
+        void Set()
+        {
             CbAllDirectory.Checked = Quiz.AllDirectories;
             CBGameDuration.Text = Quiz.GameDuration.ToString();
             CBMusicDuration.Text = Quiz.MusicDuration.ToString();
             CBRandomStart.Checked = Quiz.RandomStart;
-            this.Hide();
         }
 
         private void BtnSelectFolder_Click(object sender, EventArgs e)
@@ -53,7 +58,14 @@ namespace GuessMelody
 
         private void BtnClearList_Click(object sender, EventArgs e)
         {
-            LbMusic.Items.Clear();            
+            LbMusic.Items.Clear();
+        }
+
+        private void FParams_Load(object sender, EventArgs e)
+        {
+            Set();
+            LbMusic.Items.Clear();
+            LbMusic.Items.AddRange(Quiz.ListMusic.ToArray());
         }
     }
 }
