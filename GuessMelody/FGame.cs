@@ -19,7 +19,7 @@ namespace GuessMelody
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            WMP.URL = Quiz.listMusic[0];
+            WMP.URL = Quiz.ListMusic[0];
         }
     }
 }
