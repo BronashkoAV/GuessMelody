@@ -20,12 +20,20 @@ namespace GuessMelody
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
+            Quiz.AllDirectories = CbAllDirectory.Checked;
+            Quiz.GameDuration = Convert.ToInt32(CBGameDuration.Text);
+            Quiz.MusicDuration = Convert.ToInt32(CBMusicDuration.Text);
+            Quiz.RandomStart = CBRandomStart.Checked;
             Quiz.WriteParam();
             this.Hide();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
+            CbAllDirectory.Checked = Quiz.AllDirectories;
+            CBGameDuration.Text = Quiz.GameDuration.ToString();
+            CBMusicDuration.Text = Quiz.MusicDuration.ToString();
+            CBRandomStart.Checked = Quiz.RandomStart;
             this.Hide();
         }
 
@@ -35,6 +43,7 @@ namespace GuessMelody
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 string[] music_list = Directory.GetFiles(fbd.SelectedPath, "*.mp3", CbAllDirectory.Checked ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly);
+                Quiz.LastFolder = fbd.SelectedPath;
                 LbMusic.Items.Clear();
                 LbMusic.Items.AddRange(music_list);
                 Quiz.ListMusic.Clear();
@@ -44,7 +53,7 @@ namespace GuessMelody
 
         private void BtnClearList_Click(object sender, EventArgs e)
         {
-            LbMusic.Items.Clear();
+            LbMusic.Items.Clear();            
         }
     }
 }
