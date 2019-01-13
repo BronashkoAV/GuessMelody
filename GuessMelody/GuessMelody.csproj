@@ -148,5 +148,16 @@
   <ItemGroup>
     <None Include="Resources\1486348822-music-play-pause-control-go-arrow-blue_80476 %281%291.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Stop.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

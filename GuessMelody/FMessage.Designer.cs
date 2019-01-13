@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMessage));
             this.LblMessage = new System.Windows.Forms.Label();
             this.BtnYes = new System.Windows.Forms.Button();
             this.BtnNo = new System.Windows.Forms.Button();
+            this.LblTimeAnswer = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // LblMessage
@@ -66,6 +69,21 @@
             this.BtnNo.Text = "No";
             this.BtnNo.UseVisualStyleBackColor = true;
             // 
+            // LblTimeAnswer
+            // 
+            this.LblTimeAnswer.AutoSize = true;
+            this.LblTimeAnswer.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LblTimeAnswer.Location = new System.Drawing.Point(382, 262);
+            this.LblTimeAnswer.Name = "LblTimeAnswer";
+            this.LblTimeAnswer.Size = new System.Drawing.Size(35, 38);
+            this.LblTimeAnswer.TabIndex = 3;
+            this.LblTimeAnswer.Text = "0";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -73,12 +91,15 @@
             this.BackgroundImage = global::GuessMelody.Properties.Resources.videoblocks_4k_club_music_particles_field_dance_motion_background_orange_and_red_bnwlpmrjg_thumbnail_full01;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LblTimeAnswer);
             this.Controls.Add(this.BtnNo);
             this.Controls.Add(this.BtnYes);
             this.Controls.Add(this.LblMessage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FMessage";
             this.Text = "FMessage";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMessage_FormClosing);
+            this.Load += new System.EventHandler(this.FMessage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,5 +109,7 @@
         private System.Windows.Forms.Button BtnYes;
         private System.Windows.Forms.Button BtnNo;
         public System.Windows.Forms.Label LblMessage;
+        private System.Windows.Forms.Label LblTimeAnswer;
+        private System.Windows.Forms.Timer timer1;
     }
 }
