@@ -54,6 +54,7 @@
             this.WMP.Size = new System.Drawing.Size(237, 48);
             this.WMP.TabIndex = 0;
             this.WMP.Visible = false;
+            this.WMP.OpenStateChange += new AxWMPLib._WMPOCXEvents_OpenStateChangeEventHandler(this.WMP_OpenStateChange);
             // 
             // BtnNext
             // 

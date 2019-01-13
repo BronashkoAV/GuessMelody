@@ -13,7 +13,7 @@ namespace GuessMelody
     public partial class FGame : Form
     {
         Random rnd = new Random();
-        int musicDuration=Quiz.MusicDuration;
+        int musicDuration = Quiz.MusicDuration;
 
         public FGame()
         {
@@ -96,7 +96,9 @@ namespace GuessMelody
             if (e.KeyData == Keys.Space)
             {
                 GamePause();
-                if (MessageBox.Show("Правильный ответ?", "Player1", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                FMessage fm = new FMessage();
+                fm.LblMessage.Text = "Player1";
+                if (fm.ShowDialog() == DialogResult.Yes)
                 {
                     LblPlayerScore1.Text = Convert.ToString(Convert.ToInt32(LblPlayerScore1.Text) + 1);
                     MakeMusic();
@@ -107,12 +109,25 @@ namespace GuessMelody
             if (e.KeyData == Keys.Enter)
             {
                 GamePause();
-                if (MessageBox.Show("Правильный ответ?", "Player2", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                FMessage fm = new FMessage();
+                fm.LblMessage.Text = "Player1";
+                if (fm.ShowDialog() == DialogResult.Yes)
                 {
                     LblPlayerScore2.Text = Convert.ToString(Convert.ToInt32(LblPlayerScore2.Text) + 1);
                     MakeMusic();
                 }
                 GamePlay();
+            }
+        }
+
+        private void WMP_OpenStateChange(object sender, AxWMPLib._WMPOCXEvents_OpenStateChangeEvent e)
+        {
+            if (Quiz.RandomStart)
+            {
+                if (WMP.openState == WMPLib.WMPOpenState.wmposMediaOpen)
+                {
+                    WMP.Ctlcontrols.currentPosition = rnd.Next(0, (int)WMP.currentMedia.duration / 2);
+                }
             }
         }
     }
