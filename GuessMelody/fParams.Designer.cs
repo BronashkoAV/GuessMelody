@@ -41,6 +41,10 @@
             this.CBGameDuration = new System.Windows.Forms.ComboBox();
             this.LblTime = new System.Windows.Forms.Label();
             this.LblContinue = new System.Windows.Forms.Label();
+            this.LblPlayer1 = new System.Windows.Forms.Label();
+            this.LblPlayer2 = new System.Windows.Forms.Label();
+            this.CBPlayer1 = new System.Windows.Forms.ComboBox();
+            this.CBPlayer2 = new System.Windows.Forms.ComboBox();
             this.GBSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +109,10 @@
             // 
             // GBSettings
             // 
+            this.GBSettings.Controls.Add(this.CBPlayer2);
+            this.GBSettings.Controls.Add(this.CBPlayer1);
+            this.GBSettings.Controls.Add(this.LblPlayer2);
+            this.GBSettings.Controls.Add(this.LblPlayer1);
             this.GBSettings.Controls.Add(this.CBRandomStart);
             this.GBSettings.Controls.Add(this.CBMusicDuration);
             this.GBSettings.Controls.Add(this.CBGameDuration);
@@ -112,7 +120,7 @@
             this.GBSettings.Controls.Add(this.LblContinue);
             this.GBSettings.Location = new System.Drawing.Point(13, 457);
             this.GBSettings.Name = "GBSettings";
-            this.GBSettings.Size = new System.Drawing.Size(378, 204);
+            this.GBSettings.Size = new System.Drawing.Size(556, 204);
             this.GBSettings.TabIndex = 6;
             this.GBSettings.TabStop = false;
             this.GBSettings.Text = "Настройки игры";
@@ -183,6 +191,42 @@
             this.LblContinue.TabIndex = 0;
             this.LblContinue.Text = "Продолжительность игры";
             // 
+            // LblPlayer1
+            // 
+            this.LblPlayer1.AutoSize = true;
+            this.LblPlayer1.Location = new System.Drawing.Point(332, 32);
+            this.LblPlayer1.Name = "LblPlayer1";
+            this.LblPlayer1.Size = new System.Drawing.Size(56, 17);
+            this.LblPlayer1.TabIndex = 5;
+            this.LblPlayer1.Text = "Player1";
+            // 
+            // LblPlayer2
+            // 
+            this.LblPlayer2.AutoSize = true;
+            this.LblPlayer2.Location = new System.Drawing.Point(332, 78);
+            this.LblPlayer2.Name = "LblPlayer2";
+            this.LblPlayer2.Size = new System.Drawing.Size(56, 17);
+            this.LblPlayer2.TabIndex = 6;
+            this.LblPlayer2.Text = "Player2";
+            // 
+            // CBPlayer1
+            // 
+            this.CBPlayer1.FormattingEnabled = true;
+            this.CBPlayer1.Location = new System.Drawing.Point(407, 32);
+            this.CBPlayer1.Name = "CBPlayer1";
+            this.CBPlayer1.Size = new System.Drawing.Size(121, 24);
+            this.CBPlayer1.TabIndex = 7;
+            this.CBPlayer1.Text = "Space";
+            // 
+            // CBPlayer2
+            // 
+            this.CBPlayer2.FormattingEnabled = true;
+            this.CBPlayer2.Location = new System.Drawing.Point(407, 78);
+            this.CBPlayer2.Name = "CBPlayer2";
+            this.CBPlayer2.Size = new System.Drawing.Size(121, 24);
+            this.CBPlayer2.TabIndex = 8;
+            this.CBPlayer2.Text = "Enter";
+            // 
             // FParams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -220,5 +264,9 @@
         private System.Windows.Forms.ComboBox CBGameDuration;
         private System.Windows.Forms.Label LblTime;
         private System.Windows.Forms.Label LblContinue;
+        private System.Windows.Forms.ComboBox CBPlayer2;
+        private System.Windows.Forms.ComboBox CBPlayer1;
+        private System.Windows.Forms.Label LblPlayer2;
+        private System.Windows.Forms.Label LblPlayer1;
     }
 }
