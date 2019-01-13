@@ -12,14 +12,28 @@ namespace GuessMelody
 {
     public partial class FGame : Form
     {
+        Random rnd = new Random();
+
         public FGame()
         {
             InitializeComponent();
         }
 
+        void MakeMusic()
+        {
+            int n = rnd.Next(0, Quiz.ListMusic.Count);
+            WMP.URL = Quiz.ListMusic[n];
+            Quiz.ListMusic.RemoveAt(n);
+        }
+
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            WMP.URL = Quiz.ListMusic[0];
+            MakeMusic();
+        }
+
+        private void FGame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            WMP.Ctlcontrols.stop();
         }
     }
 }

@@ -130,5 +130,14 @@
   <ItemGroup>
     <None Include="Resources\1486348822-music-play-pause-control-go-arrow-blue_80476 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486348820-music-pause-stop-control-play-blue_80477.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486348813-music-forward-front-next-arrow-blue_80474.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486348822-music-play-pause-control-go-arrow-blue_80476 %281%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

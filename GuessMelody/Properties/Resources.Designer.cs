@@ -63,6 +63,26 @@ namespace GuessMelody.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486348813_music_forward_front_next_arrow_blue_80474 {
+            get {
+                object obj = ResourceManager.GetObject("1486348813-music-forward-front-next-arrow-blue_80474", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486348820_music_pause_stop_control_play_blue_80477 {
+            get {
+                object obj = ResourceManager.GetObject("1486348820-music-pause-stop-control-play-blue_80477", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1486348822_music_play_pause_control_go_arrow_blue_80476 {
             get {
                 object obj = ResourceManager.GetObject("1486348822-music-play-pause-control-go-arrow-blue_80476", resourceCulture);
@@ -76,6 +96,16 @@ namespace GuessMelody.Properties {
         internal static System.Drawing.Bitmap _1486348822_music_play_pause_control_go_arrow_blue_80476__1_ {
             get {
                 object obj = ResourceManager.GetObject("1486348822-music-play-pause-control-go-arrow-blue_80476 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486348822_music_play_pause_control_go_arrow_blue_80476__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("1486348822-music-play-pause-control-go-arrow-blue_80476 (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
