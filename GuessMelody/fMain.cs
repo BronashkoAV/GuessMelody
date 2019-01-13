@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Убирать FMain при открытии другого окна
+
 namespace GuessMelody
 {
     public partial class FMain : Form
     {
         FParams fp = new FParams();
+        FGame fg = new FGame();
 
         public FMain()
         {
@@ -26,7 +29,14 @@ namespace GuessMelody
 
         private void BtnSettings_Click(object sender, EventArgs e)
         {
+            //this.Hide();
             fp.ShowDialog();
+        }
+
+        private void BtnPlay_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            fg.ShowDialog();
         }
     }
 }

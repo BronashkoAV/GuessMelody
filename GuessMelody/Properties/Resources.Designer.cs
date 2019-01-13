@@ -63,6 +63,26 @@ namespace GuessMelody.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486348822_music_play_pause_control_go_arrow_blue_80476 {
+            get {
+                object obj = ResourceManager.GetObject("1486348822-music-play-pause-control-go-arrow-blue_80476", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486348822_music_play_pause_control_go_arrow_blue_80476__1_ {
+            get {
+                object obj = ResourceManager.GetObject("1486348822-music-play-pause-control-go-arrow-blue_80476 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap depositphotos_83067992_stock_photo_music_notes_background {
             get {
                 object obj = ResourceManager.GetObject("depositphotos_83067992-stock-photo-music-notes-background", resourceCulture);
@@ -79,21 +99,6 @@ namespace GuessMelody.Properties {
                         "bnwlpmrjg_thumbnail-full01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
         }
     }
 }

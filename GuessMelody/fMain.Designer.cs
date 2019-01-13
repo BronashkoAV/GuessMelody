@@ -44,6 +44,7 @@
             this.BtnPlay.Text = "Игра";
             this.BtnPlay.UseVisualStyleBackColor = true;
             this.BtnPlay.UseWaitCursor = true;
+            this.BtnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
             // BtnSettings
             // 

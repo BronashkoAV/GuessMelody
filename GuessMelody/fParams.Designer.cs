@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FParams));
             this.LbMusic = new System.Windows.Forms.ListBox();
             this.BtnSelectFolder = new System.Windows.Forms.Button();
             this.BtnClearList = new System.Windows.Forms.Button();
@@ -106,6 +107,7 @@
             this.Controls.Add(this.BtnClearList);
             this.Controls.Add(this.BtnSelectFolder);
             this.Controls.Add(this.LbMusic);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FParams";
             this.Text = "Настройки";
             this.ResumeLayout(false);
