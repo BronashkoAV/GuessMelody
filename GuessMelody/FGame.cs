@@ -15,6 +15,7 @@ namespace GuessMelody
     {
         Random rnd = new Random();
         int musicDuration = Quiz.MusicDuration;
+        bool[] players = new bool[2];
 
         public FGame()
         {
@@ -31,6 +32,8 @@ namespace GuessMelody
                 WMP.URL = Quiz.ListMusic[n];
                 Quiz.ListMusic.RemoveAt(n);
                 LblMelodyCount.Text = Quiz.ListMusic.Count.ToString();
+                players[0] = false;
+                players[1] = false;
             }
         }
 
@@ -94,13 +97,15 @@ namespace GuessMelody
 
         private void FGame_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.A)
+            if (!timer1.Enabled) return;
+            if (e.KeyData == Keys.A && !players[0])
             {
                 GamePause();
                 FMessage fm = new FMessage();
                 fm.LblMessage.Text = "Player1";
                 SoundPlayer sp = new SoundPlayer("Resources\\1.wav");
                 sp.PlaySync();
+                players[0] = true;
                 if (fm.ShowDialog() == DialogResult.Yes)
                 {
                     LblPlayerScore1.Text = Convert.ToString(Convert.ToInt32(LblPlayerScore1.Text) + 1);
@@ -109,13 +114,14 @@ namespace GuessMelody
                 GamePlay();
             }
 
-            if (e.KeyData == Keys.P)
+            if (e.KeyData == Keys.P && !players[1])
             {
                 GamePause();
                 FMessage fm = new FMessage();
                 fm.LblMessage.Text = "Player2";
                 SoundPlayer sp = new SoundPlayer("Resources\\2.wav");
                 sp.PlaySync();
+                players[1] = true;
                 if (fm.ShowDialog() == DialogResult.Yes)
                 {
                     LblPlayerScore2.Text = Convert.ToString(Convert.ToInt32(LblPlayerScore2.Text) + 1);
